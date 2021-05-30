@@ -1,0 +1,653 @@
+@font-face {
+    font-family: HelveticaNeueCyr-Black;
+    src: url("../fonts/HelveticaNeueCyr-Black.otf");
+}
+@font-face {
+    font-family: HelveticaNeueCyr-Light;
+    src: url("../fonts/HelveticaNeueCyr-Light.otf");
+}
+@font-face {
+    font-family: Nimbus;
+    src: url("../fonts/NIMBSTB.TTF");
+}
+@font-face {
+    font-family: HelveticaNeueCyr-Bold;
+    src: url("../fonts/HelveticaNeueCyr-Bold.otf");
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
+    grid-column-gap: 40px;
+}
+header{
+    width: 100%;
+    height: 870px;
+    grid-column: 2/14;
+    background: url("../images/background_top.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    border-bottom: 2px solid rgb(228, 97, 7);
+}
+.hiddenMenu {
+    visibility: hidden;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 187px;
+    height: 372px;
+    width: 100%;
+    background: url("../images/nav_background.png") center center no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.logo_img {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 922px;
+    height: 202px;
+    z-index: 4;
+}
+nav {
+    height: 75px;
+    width: 545px;
+    margin-top: 2px;
+    margin-left: -38px;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+.home {
+    width: 72px;
+    height: 75px;
+    background: url("../images/top_sprite.png") 0 -76px no-repeat;
+}
+.home:hover {
+    background-position: 0 0;
+}
+.mulch_supplier {
+    width: 136px;
+    height: 75px;
+    background: url("../images/top_sprite.png") -72px -76px no-repeat;
+}
+.mulch_supplier:hover {
+    background-position: -72px 0;
+}
+.soils {
+    width: 65px;
+    height: 75px;
+    background: url("../images/top_sprite.png") -208px -76px no-repeat;
+}
+.soils:hover {
+    background-position: -208px 0;
+}
+.mulch_fundraisers {
+    width: 165px;
+    height: 75px;
+    background: url("../images/top_sprite.png") -273px -76px no-repeat;
+}
+.mulch_fundraisers:hover {
+    background-position: -273px 0;
+}
+.contact_us {
+    width: 107px;
+    height: 75px;
+    background: url("../images/top_sprite.png") -438px -76px no-repeat;
+}
+.contact_us:hover {
+    background-position: -438px 0;
+}
+.header_text {
+    font-family: 'HelveticaNeueCyr-Black', sans-serif;
+    font-size: 68px;
+    height: auto;
+    width: 90%;
+    margin-top: 42px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    z-index: 4;
+    text-shadow: 0px 0px 6px rgba(31, 88, 0, 0.75);
+}
+.main_text {
+    position: absolute;
+    top: 451px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 960px;
+    height: 180px;
+    border-radius: 5px;
+    background-color: rgba(38, 49, 28, 0.7);
+    color: white;
+}
+.main_text_container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.main_text_container h1 {
+    font-family: 'HelveticaNeueCyr-Light', sans-serif;
+    font-size: 34px;
+    position: absolute;
+    top: 34px;
+    left: 50.2%;
+    transform: translate(-50%, 0);
+    z-index: 4;
+}
+.main_text_container p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    padding: 0px 30px;
+    line-height: 25px;
+    text-align: center;
+    z-index: 4;
+}
+.hr1, .hr2{
+    width: 100%;
+    height: 4px;
+    grid-column: 2/14;
+    z-index: 1;
+    margin-top: -2px;
+}
+.hr1 {
+    background-color: rgb(228, 97, 7);
+}
+.hr2 {
+    background-color: rgb(125, 168, 60);
+}
+
+main {
+    width: 100%;
+    height: 677px;
+    grid-column: 2/14;
+    background-color: rgb(38, 49, 28);
+    position: relative;
+    z-index: 1;
+}
+.potting_soil {
+    top: -123px;
+    left: 15.1%;
+}
+.potting_soil .group_image {
+    background: url("../images/group_image.jpg") -96px -69px no-repeat;
+    background-size: 860%;
+}
+.potting_soil .group_text,
+.peat_moss .group_text,
+.compost .group_text {
+    margin-left: -7px;
+}
+.peat_moss {
+    top: -123px;
+    left: 49.6%;
+    transform: translate(-50%, 0);
+}
+.peat_moss .group_image {
+    background: url("../images/group_image.jpg") -505px -10px no-repeat;
+    background-size: 860%;
+}
+.fertilizers {
+    top: -123px;
+    right: 15.8%;
+}
+.fertilizers .group_image {
+    background: url("../images/group_image.jpg") -881px -17px no-repeat;
+    background-size: 860%;
+}
+.fertilizers .group_text {
+    margin-left: 2px;
+}
+.mulch {
+    bottom: 46px;
+    left: 28.4%;
+}
+.mulch .group_image {
+    background: url("../images/group_image.jpg") -1186px -8px no-repeat;
+    background-size: 875%;
+}
+.mulch .group_text {
+    margin-left: -4px;
+}
+.compost {
+    bottom: 46px;
+    right: 28.4%;
+}
+.compost .group_image {
+    background: url("../images/group_image.jpg") -1542px -39px no-repeat;
+    background-size: 865%;
+}
+.potting_soil,
+.peat_moss,
+.fertilizers,
+.mulch,
+.compost {
+    position: absolute;
+    width: 222px;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+.round {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.group_image {
+    border-radius: 50%;
+    width: 205px;
+    height: 205px;
+}
+.group_text {
+    font-family: 'HelveticaNeueCyr-Light', sans-serif;
+    font-size: 34px;
+    color: white;
+    margin-top: 38px;
+}
+.group_learn_more {
+    width: 168px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    color: rgb(161, 173, 151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nimbus', sans-serif;
+    font-size: 19px;
+    margin-top: 25px;
+}
+.group_learn_more:hover,
+.bottom .group_learn_more:hover {
+    border-color: rgb(141, 199, 5);
+    color: rgb(141, 199, 5);
+}
+.bottom {
+    grid-column: 2/14;
+    width: 100%;
+    height: 535px;
+    background: url("../images/bottom_image.jpg") center -15px no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+.bottom_text {
+    position: absolute;
+    top: 88px;
+    left: 159px;
+    width: 440px;
+    height: auto;
+}
+.bottom_text_top {
+    font-family: 'HelveticaNeueCyr-Light', sans-serif;
+    font-size: 34px;
+}
+.bottom_text_middle {
+    font-family: 'HelveticaNeueCyr-Bold', sans-serif;
+    font-size: 54px;
+    color:rgb(72, 137, 10);
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+.bottom_text_main {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-left: 4px;
+    line-height: 25px;
+}
+.bottom .group_learn_more {
+    margin-top: 18px;
+    margin-left: 2px;
+    color: white;
+    border-color: white;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    grid-column: 2/14;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.footer_nav {
+    top: 20px;
+    font-family: 'Nimbus', sans-serif;
+    font-size: 19px;
+    width: 542px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 2;
+    position: absolute;
+    margin-left: -28px;
+}
+.footer_nav a {
+    flex: 1 1 auto;
+    margin: 0px 12px;
+    color: rgb(123, 123, 123);
+    z-index: 3;
+}
+.footer_nav a:hover {
+    color: rgb(141, 199, 5);
+}
+.footer_co {
+    position: absolute;
+    top: 63px;
+    width: 100%;
+    height: 64px;
+    background-color: rgb(228, 228, 228);
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color:rgb(145, 145, 145);
+}
+.rights {
+    margin-top: 22px;
+    margin-left: 145px;
+    float: left;
+}
+.year {
+    margin-top: 22px;
+    margin-right: 169px;
+    float: right;
+}
+
+@media all and (max-width: 1280px){
+    .wrapper {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: unset;
+    }
+    header{
+        grid-column: span 12;
+    }
+    .hr1, .hr2{
+        grid-column: span 12;
+    }        
+    main {
+        grid-column: span 12;
+    }    
+    .bottom {
+        grid-column: span 12;
+    }
+    footer {
+        grid-column: span 12;
+    }
+}
+@media all and (max-width: 1050px){
+    header {
+        display: flex;
+        /* justify-content: center; */
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 130px;
+    }
+    .logo_img {
+        position: unset;
+        transform: none;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+    .logo {
+        background: none;
+        height: auto;
+        position: unset;
+    }
+    .logo nav {
+        display: none;
+    }
+    .header_text {
+        font-family: 'HelveticaNeueCyr-Black', sans-serif;
+        font-size: 48px;
+        height: auto;
+        width: 90%;
+        margin-top: 0;
+        line-height: 40px;
+    }
+    /* .hiddenMenu {
+        display: inline-block;
+    } */
+		/*выпадающее меню*/
+        .hiddenMenu {
+            visibility: visible;
+            z-index: 5;
+            position: absolute;
+            top: 0;
+            left: 50px;
+        }
+        .hiddenMenu nav {
+            font-family: 'Nimbus', sans-serif;
+            font-size: 19px;
+        }
+
+        .hiddenMenu nav ul {
+            /* background: darkorange; */
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .hiddenMenu nav li {
+            color: #fff;
+            /* background: darkorange; */
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+            border-radius: 5px;
+        }
+
+        .hiddenMenu nav li a {
+            color: #fff;
+        }
+
+        .hiddenMenu nav li:hover, li:focus-within {
+            background: rgb(228, 97, 7);
+            cursor: pointer;
+        }
+
+        .hiddenMenu nav li:focus-within a {
+            outline: none;
+        }
+
+        .hiddenMenu nav ul li ul {
+            /* background: orange; */
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        .hiddenMenu nav ul li:hover > ul,
+        .hiddenMenu nav ul li:focus-within > ul,
+        .hiddenMenu nav ul li ul:hover,
+        .hiddenMenu nav ul li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        .hiddenMenu nav ul li ul li {
+            clear: both;
+            width: 160px;
+        }    
+    .main_text {
+        position: unset;
+        transform: unset;
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+    .main_text_container {
+        height: auto;
+        position: unset;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_text_container h1 {
+        position: unset;
+        transform: unset;
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    .main_text_container p {
+        position: unset;
+    }
+    .potting_soil {
+        left: 1%;
+    }
+    .peat_moss {
+        left: 50%;
+    }
+    .fertilizers {
+        right: 1%;
+    }
+    .mulch {
+        left: 15%;
+    }
+    .compost {
+        right: 15%;
+    }
+    .bottom {
+        background: url(../images/bottom_image.jpg) center center no-repeat;
+        position: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px 0;
+    }
+    .bottom_text {
+        position: unset;
+
+    }
+    .footer_nav {
+        width: 100%;
+        margin: 0;
+    }
+    .footer_nav a {
+        text-align: center;
+    }
+    .rights {
+        margin-left: 5%;
+    }
+    .year {
+        margin-right: 5%;
+    }
+    
+}
+@media all and (max-width: 700px){
+    .header_text {
+        font-family: 'HelveticaNeueCyr-Black', sans-serif;
+        font-size: 28px;
+    }
+    main {
+        height: auto;
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .peat_moss {
+        transform: unset;
+    }
+    .potting_soil,
+    .peat_moss,
+    .fertilizers,
+    .mulch,
+    .compost {
+        position: unset;
+        margin: -123px 0 145px 0;
+        height: auto;
+    }
+    .group_text {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+    .group_learn_more {
+        margin-top: 15px;
+        width: 120px;
+        height: 40px;
+    }
+    .compost {
+        margin-bottom: 15px;
+    }
+    .main_text_container h1 {
+        font-size: 23px;
+        margin: 15px 0;
+        text-align: center;
+        line-height: 21px;
+    }
+    .hiddenMenu {
+        left: 0;
+        width: 100%;
+    }
+    .hiddenMenu nav {
+        margin-left: 0;
+        width: 100%;
+    }
+    .dropdown li {
+        background-color: rgba(38, 49, 28, 0.5);
+    }
+    .bottom_text {
+        width: 100%;
+    }
+    .bottom_text_main {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px;
+    }
+    footer {
+        position: unset;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer_nav {
+        flex-direction: column;
+        position: unset;
+        margin: 10px 0;
+    }
+    .footer_nav a {
+        margin: 0;
+    }
+    .footer_co {
+        position: unset;
+    }
+
+
+
+    .rights {
+        margin-top: 10px;
+    }
+    .year {
+        margin-top: 10px;
+    }
+
+}
