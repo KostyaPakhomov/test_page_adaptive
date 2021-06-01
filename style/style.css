@@ -19,15 +19,25 @@
     grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
     grid-column-gap: 40px;
 }
+.menu {
+    display: none;
+}
 header{
+    width: 100%;
+    height: auto;
+    grid-column: span 14;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
+    grid-column-gap: 40px;
+    background: url("../images/background_top.jpg") center center no-repeat;
+    background-size: cover;
+}
+.header_container {
     width: 100%;
     height: 870px;
     grid-column: 2/14;
-    background: url("../images/background_top.jpg") center center no-repeat;
-    background-size: cover;
     position: relative;
     z-index: 1;
-    border-bottom: 2px solid rgb(228, 97, 7);
 }
 .hiddenMenu {
     visibility: hidden;
@@ -46,6 +56,7 @@ header{
     z-index: 2;
 }
 .logo_img {
+    background: url("../images/logo.png") center center no-repeat;
     position: absolute;
     top: 17px;
     left: 50%;
@@ -155,7 +166,7 @@ nav {
 .hr1, .hr2{
     width: 100%;
     height: 4px;
-    grid-column: 2/14;
+    grid-column: span 14;
     z-index: 1;
     margin-top: -2px;
 }
@@ -168,9 +179,17 @@ nav {
 
 main {
     width: 100%;
+    height: auto;
+    grid-column: span 14;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
+    grid-column-gap: 40px;
+    background-color: rgb(38, 49, 28);
+}
+.main_container {
+    width: 100%;
     height: 677px;
     grid-column: 2/14;
-    background-color: rgb(38, 49, 28);
     position: relative;
     z-index: 1;
 }
@@ -278,11 +297,19 @@ main {
     color: rgb(141, 199, 5);
 }
 .bottom {
+    grid-column: span 14;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
+    grid-column-gap: 40px;
+    width: 100%;
+    height: auto;
+    background: url("../images/bottom_image.jpg") center -15px no-repeat;
+    background-size: cover;
+}
+.bottom_container {
     grid-column: 2/14;
     width: 100%;
     height: 535px;
-    background: url("../images/bottom_image.jpg") center -15px no-repeat;
-    background-size: cover;
     z-index: 1;
     position: relative;
 }
@@ -320,7 +347,10 @@ main {
 footer {
     width: 100%;
     height: auto;
-    grid-column: 2/14;
+    grid-column: span 14;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 70px)) 1fr;
+    grid-column-gap: 40px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -375,8 +405,8 @@ footer {
         grid-template-columns: repeat(12, 1fr);
         grid-column-gap: unset;
     }
-    header{
-        grid-column: span 12;
+    .header_container{
+        grid-column: span 14;
     }
     .hr1, .hr2{
         grid-column: span 12;
@@ -391,117 +421,66 @@ footer {
         grid-column: span 12;
     }
 }
+@media all and (max-width: 1150px){
+    .main_container {
+        grid-column: span 14;
+        height: 1070px;
+    }
+    .potting_soil {
+        left: 16%;
+    }
+    .peat_moss {
+        left: unset;
+        transform: unset;
+        right: 16%;
+    }
+    .fertilizers {
+        top: 280px;
+        left: 16%;
+    }
+    .mulch {
+        left: unset;
+        bottom: unset;
+        right: 16%;
+        top: 280px;
+    }
+    .compost {
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 10px;
+    }
+}
 @media all and (max-width: 1050px){
     header {
-        display: flex;
-        /* justify-content: center; */
         height: auto;
+    }
+    .header_container {
+        display: flex;
+
         align-items: center;
         flex-direction: column;
         padding-bottom: 130px;
+
+        height: 740px;
     }
     .logo_img {
-        position: unset;
-        transform: none;
+        background-size: inherit;
         width: 100%;
-        height: auto;
-        margin-top: 15px;
-    }
-    .logo {
-        background: none;
-        height: auto;
-        position: unset;
-    }
-    .logo nav {
-        display: none;
     }
     .header_text {
         font-family: 'HelveticaNeueCyr-Black', sans-serif;
         font-size: 48px;
         height: auto;
         width: 90%;
-        margin-top: 0;
+        margin-top: 15px;
         line-height: 40px;
     }
-    /* .hiddenMenu {
-        display: inline-block;
-    } */
-		/*выпадающее меню*/
-        .hiddenMenu {
-            visibility: visible;
-            z-index: 5;
-            position: absolute;
-            top: 0;
-            left: 50px;
-        }
-        .hiddenMenu nav {
-            font-family: 'Nimbus', sans-serif;
-            font-size: 19px;
-        }
-
-        .hiddenMenu nav ul {
-            /* background: darkorange; */
-            list-style: none;
-            margin: 0;
-            padding-left: 0;
-        }
-
-        .hiddenMenu nav li {
-            color: #fff;
-            /* background: darkorange; */
-            display: block;
-            float: left;
-            padding: 1rem;
-            position: relative;
-            text-decoration: none;
-            transition-duration: 0.5s;
-            border-radius: 5px;
-        }
-
-        .hiddenMenu nav li a {
-            color: #fff;
-        }
-
-        .hiddenMenu nav li:hover, li:focus-within {
-            background: rgb(228, 97, 7);
-            cursor: pointer;
-        }
-
-        .hiddenMenu nav li:focus-within a {
-            outline: none;
-        }
-
-        .hiddenMenu nav ul li ul {
-            /* background: orange; */
-            visibility: hidden;
-            opacity: 0;
-            min-width: 5rem;
-            position: absolute;
-            transition: all 0.5s ease;
-            margin-top: 1rem;
-            left: 0;
-            display: none;
-        }
-
-        .hiddenMenu nav ul li:hover > ul,
-        .hiddenMenu nav ul li:focus-within > ul,
-        .hiddenMenu nav ul li ul:hover,
-        .hiddenMenu nav ul li ul:focus {
-            visibility: visible;
-            opacity: 1;
-            display: block;
-        }
-
-        .hiddenMenu nav ul li ul li {
-            clear: both;
-            width: 160px;
-        }    
     .main_text {
-        position: unset;
-        transform: unset;
         width: 90%;
+        top: 390px;
+        z-index: 3;
         height: auto;
-        margin-top: 20px;
     }
     .main_text_container {
         height: auto;
@@ -520,23 +499,11 @@ footer {
     .main_text_container p {
         position: unset;
     }
-    .potting_soil {
-        left: 1%;
-    }
-    .peat_moss {
-        left: 50%;
-    }
-    .fertilizers {
-        right: 1%;
-    }
-    .mulch {
-        left: 15%;
-    }
-    .compost {
-        right: 15%;
-    }
     .bottom {
         background: url(../images/bottom_image.jpg) center center no-repeat;
+        height: auto;
+    }
+    .bottom_container {
         position: unset;
         display: flex;
         align-items: center;
@@ -547,6 +514,9 @@ footer {
     .bottom_text {
         position: unset;
 
+    }
+    .bottom_text_main {
+        text-shadow: 1px 1px 3px white;
     }
     .footer_nav {
         width: 100%;
@@ -564,40 +534,31 @@ footer {
     
 }
 @media all and (max-width: 700px){
+    header {
+        display: inline-block;
+    }
+    .logo nav {
+        margin: 0;
+    }
     .header_text {
         font-family: 'HelveticaNeueCyr-Black', sans-serif;
         font-size: 28px;
+        margin-top: 0;
     }
     main {
-        height: auto;
-        position: unset;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: inline-block;
     }
-    .peat_moss {
-        transform: unset;
+    .main_text {
+        margin-top: -40px;
     }
+
     .potting_soil,
+    .fertilizers {
+        left: 7%;
+    }
     .peat_moss,
-    .fertilizers,
-    .mulch,
-    .compost {
-        position: unset;
-        margin: -123px 0 145px 0;
-        height: auto;
-    }
-    .group_text {
-        font-size: 24px;
-        margin-top: 15px;
-    }
-    .group_learn_more {
-        margin-top: 15px;
-        width: 120px;
-        height: 40px;
-    }
-    .compost {
-        margin-bottom: 15px;
+    .mulch {
+        right: 7%;
     }
     .main_text_container h1 {
         font-size: 23px;
@@ -605,19 +566,11 @@ footer {
         text-align: center;
         line-height: 21px;
     }
-    .hiddenMenu {
-        left: 0;
-        width: 100%;
-    }
-    .hiddenMenu nav {
-        margin-left: 0;
-        width: 100%;
-    }
-    .dropdown li {
-        background-color: rgba(38, 49, 28, 0.5);
-    }
     .bottom_text {
         width: 100%;
+    }
+    .bottom_text p {
+        text-shadow: 1px 1px 3px white;
     }
     .bottom_text_main {
         width: 100%;
@@ -639,15 +592,90 @@ footer {
     }
     .footer_co {
         position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-
-
-    .rights {
-        margin-top: 10px;
+    .rights, .year {
+        margin: 0;
     }
-    .year {
-        margin-top: 10px;
-    }
-
 }
+@media all and (max-width: 550px){
+    .menu {
+        display: inline-block;
+    }
+    header {
+        z-index: 2;
+    }
+    .header_container {
+        height: auto;
+    } 
+    .logo nav {
+        display: none;
+    }
+    .header_text {
+        margin-top: 42px;
+    }
+    .logo_img {
+        position: unset;
+        transform: unset;
+        margin-top: 17px;
+    }
+    .logo {
+        position: unset;
+        margin-top: -31px;
+        height: auto;
+    }
+    /* .logo nav {
+        display: none; 
+    } */
+    .main_text {
+        position: unset;
+        transform: unset;
+        margin-top: 20px;
+    }    .main_container {
+        height: auto;
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .peat_moss {
+        transform: unset;
+    }
+    .potting_soil,
+    .peat_moss,
+    .fertilizers,
+    .mulch,
+    .compost {
+        position: unset;
+        margin: -123px auto 145px auto;
+        height: auto;
+    }
+    .compost {
+        transform: unset;
+    }
+    .compost {
+        margin-bottom: 15px;
+    }
+
+
+    .main_text_container p {
+        text-align: left;
+    }
+    .bottom {
+        display: inline-block;
+    }
+    .bottom_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_text_main {
+        padding: 0 20px;
+    }
+}
+
+
+
